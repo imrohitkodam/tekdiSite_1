@@ -1,0 +1,221 @@
+/* ======================================
+ * 			Scroll to top
+ * ===================================== */
+.scrollToTop {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: none;
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  background: $base-color;
+  border: 2px solid #fff;
+  border-radius: 2px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+/* =======================
+			footer
+========================= */
+footer {
+  .tjbase-footer {
+    //background-color: #222;
+    padding: 1.5rem 0;
+    color: #EEEFF4;
+    background-color: #222;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+
+    .footer-menu {
+
+      h5 {
+        font-weight: 700;
+        font-size: $text-lg;
+        line-height: 21px;
+        margin: 0 0 0.5rem 0;
+      }
+
+      .mod-menu {
+        .nav-item {
+          display: inline-block;
+          width: 100%;
+
+          a,
+          span {
+            color: #EEEFF4;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $text-xs;
+            line-height: 14px;
+            margin-bottom: 0.75rem;
+            display: inline-block;
+
+            &:after {
+              display: inline-block;
+              font: normal normal normal 14px/1 FontAwesome;
+              font-size: inherit;
+              text-rendering: auto;
+              -webkit-font-smoothing: antialiased;
+              content: "\f105";
+              padding: 0 0 0 5px;
+              font-size: 16px;
+              vertical-align: middle;
+            }
+          }
+
+          &.active {
+            a,
+            span {
+              font-weight: 700;
+              font-size: 1rem;
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .social-links {
+    .icon {
+      font-size: 1rem;
+      margin-right: 1rem;
+      color: #fff;
+
+      &.facebook:hover {
+        color: #0B81EC;
+      }
+
+      &.twitter:hover {
+        color: #1D9BF0;
+      }
+
+      &.linkedin:hover {
+        color: #0B66C2;
+      }
+
+      &.youtube:hover {
+        color: #FA423B;
+      }
+    }
+  }
+
+  .copyright {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    font-size: $text-xs;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    .social-links {
+      .icon {
+        font-size: 1.125rem;
+        margin-right: 0.75rem;
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 1200px) {
+  footer {
+    .tjbase-footer {
+      padding: 2rem 0;
+
+      .footer-menu {
+        h5 {
+          font-size: $text-1-5xl;
+          line-height: 21px;
+          margin: 0 0 1.5rem 0;
+        }
+
+        .mod-menu {
+          .nav-item {
+            a,
+            span {
+              font-size: $text-sm;
+              line-height: 16px;
+              margin-bottom: 1.25rem;
+            }
+          }
+        }
+      }
+    }
+
+    .social-links {
+      .icon {
+        font-size: 1.25rem;
+        margin-right: 1rem;
+      }
+    }
+    .copyright {
+      font-size: $text-sm;
+    }
+  }
+}
+.footer-contact .fa {
+  width: 46px;
+  height: 46px;
+  padding: 13px;
+  color: #909090;
+  font-size: 1.25rem;
+  text-align: center;
+  background: #fff;
+  border-radius: 50%;
+  transform: scale3d(0.95, 0.95, 0.95);
+  transition: all .2s ease-out 0s
+}
+
+.footer-contact .fa:hover {
+  transform: scale3d(1, 1, 1) translateY(-2px)
+}
+
+.footer-contact .fa.fa-youtube {
+  background: #fe431c;
+  color: #fff
+}
+
+.footer-contact .facebook,
+.footer-contact .twitter,
+.footer-contact .linkedin {
+  transform: scale3d(0.95, 0.95, 0.95);
+  transition: all .2s ease-out 0s
+}
+
+.footer-contact .facebook:hover,
+.footer-contact .twitter:hover,
+.footer-contact .linkedin:hover {
+  transform: scale3d(1, 1, 1) translateY(-2px)
+}
+
+.footer-contact .facebook path,
+.footer-contact .twitter path,
+.footer-contact .linkedin path {
+  fill: #fff !important
+}
+
+.footer-contact .facebook {
+  background-color: #4267b2
+}
+
+.footer-contact .twitter {
+  background-color: #1da1f2
+}
+
+.footer-contact .linkedin {
+  background-color: #0077b5
+}
+.rounded-full{
+  border-radius: 9999px;
+  padding:0.75rem;
+}

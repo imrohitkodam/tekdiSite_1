@@ -1,0 +1,10 @@
+/* ======================================
+ * 				Alerts
+ * ===================================== */
+#system-message-container {
+  margin: 10px 0;
+
+  &:empty {
+    display: none;
+  }
+}

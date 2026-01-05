@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id$ -->
+<extension version="4.3.0" type="plugin" group="system" method="upgrade">
+	<name>Zoho SalesIQ</name>
+	<author>SalesIQ Team</author>
+	<creationDate>October 2021</creationDate>
+	<copyright>Copyright (C) 2023 zoho.com</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@zohosalesiq.com</authorEmail>
+  <authorUrl>http://zoho.com/salesiq</authorUrl>
+	<version>1.0.4</version>
+	<description>PLG_ZOHO_SALESIQ_DESCRIPTION</description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="zoho_salesiq">zoho_salesiq.php</filename>
+		<folder plugin="zoho_salesiq">zoho_salesiq</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.plg_system_zoho_salesiq.ini</language>
+	</languages>
+	<config addfieldpath="/plugins/system/zoho_salesiq/zoho_salesiq">
+	  <fields name="params">
+	  	<fieldset name="main" label="Zoho SalesIQ settings">
+        <field name="salesiq_spacer" type="spacer" label="&lt;a href='https://salesiq.zoho.com/register.sas?source=Joomla.salesiqplugin' target='_blank'&gt;&lt;strong&gt;Click here to sign up&lt;/strong&gt;&lt;/a&gt; for Zoho SalesIQ and get the widget code" />
+	  		<field name="salesiq_widget_code" type="textarea" default="" label="Chat Widget code (Please enter the Chat Widget code here..)" rows="10" cols="100" filter="RAW" />
+	  		<field name="salesiq_show" type="radio" default="0" label="Chat Window enabled (If set to No, the chat window is disabled and only the tracking will work.)">
+	  			<option value="0">Yes</option>
+	  			<option value="1">No</option>
+	  		</field>
+			  <field name="salesiq_mobile" type="radio" default="0" label="Hide for Mobile (If set to Yes, the chat window will be hidden on Mobiles and only the tracking will work.)">
+	  			<option value="1">Yes</option>
+	  			<option value="0">No</option>
+			  </field>
+			  <field name="salesiq_tablet" type="radio" default="0" label="Hide for Tablet (If set to Yes, the chat window will be hidden on Tablets and only the tracking will work.)">
+	  			<option value="1">Yes</option>
+	  			<option value="0">No</option>
+			  </field>
+	  	</fieldset>
+	  </fields>
+	</config>
+</extension>

@@ -1,0 +1,59 @@
+.form-control {
+  font-weight: 400;
+  font-size: $text-sm;
+  appearance: auto;
+
+  &.form-select {
+    appearance: none;
+  }
+
+  &:focus {
+    border-color: #ced4da;
+    outline: 0;
+    box-shadow: 1px 1px 10px 3px rgb(89 0 0 / 52%);
+  }
+}
+
+input {
+  &.form-control {
+    padding: 0.5rem 0.75rem;
+  }
+
+  &::placeholder,
+  &::-webkit-input-placeholder {
+    color: #adb5bd;
+    font-weight: 400;
+    font-size: $text-sm;
+  }
+}
+
+.chosen-container-single {
+  .chosen-single {
+    height: 40px;
+    padding: 8px 20px 8px 12px;
+    font-size: $text-sm;
+    background: transparent;
+    border-radius: 3px;
+
+    div {
+      top: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: 991px) {
+  input::placeholder,
+  input::-webkit-input-placeholder {
+    font-size: 0.9rem;
+  }
+}
+
+/* Ask a question */
+.ask-a-question {
+  .btn-primary {
+    width: 100%;
+    padding: 9px 35px;
+    font-size: $text-base;
+    line-height: 1.2rem;
+  }
+}

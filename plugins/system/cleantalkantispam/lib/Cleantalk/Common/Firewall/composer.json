@@ -1,0 +1,30 @@
+{
+  "name": "cleantalk/firewall",
+  "description": "CleanTalk APBCT `SFW` classes",
+  "type": "cleantalk-apbct-lib",
+  "authors": [
+    {
+      "name": "CleanTalk Team",
+      "email": "support@cleantalk.org"
+    }
+  ],
+  "license": "GPL-3.0-or-later",
+  "require": {
+    "cleantalk/apbct-installer": "*",
+    "cleantalk/mloader": "*",
+    "cleantalk/variables": "*",
+    "cleantalk/cleaner": "*",
+    "cleantalk/queue": "*",
+    "cleantalk/db": "^1.5",
+    "cleantalk/dns": "^1.0",
+    "cleantalk/api": "^1.0",
+    "cleantalk/cron": "^1.0",
+    "cleantalk/remote-calls": "^1.0",
+    "cleantalk/storage-handler": "^1.0"
+  },
+  "config": {
+    "allow-plugins": {
+      "cleantalk/apbct-installer": true
+    }
+  }
+}

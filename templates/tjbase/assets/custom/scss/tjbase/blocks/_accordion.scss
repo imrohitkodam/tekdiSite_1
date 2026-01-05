@@ -1,0 +1,132 @@
+.event-faqs {
+  .mod-custom {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  [data-rlta-type="accordions"] {
+    width: 100%;
+    flex: 0 0 auto;
+
+    background-color: unset;
+    border:0;
+    border-radius: 0;
+
+    &:first-child {
+      padding: 0 15px;
+    }
+    &:nth-child(2){
+      padding: 0 15px;
+    }
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button][data-rlta-state=open],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button][data-rlta-state=opening],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-positioning=top][data-rlta-type=accordions]>[data-rlta-element=panel],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-positioning=top][data-rlta-type=tabs]>[data-rlta-element=panels]>[data-rlta-element=panel],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button]:focus,
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button]:hover {
+    background-color: unset;
+    border:0;
+    border-radius: 0;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button] {
+    padding: 0.85rem 3rem;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button][data-rlta-state=open] {
+    padding: 0.85rem 3rem 0.5rem 3rem;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=panel]>[data-rlta-element=panel-content],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=tabs]>[data-rlta-element=panels]>[data-rlta-element=panel]>[data-rlta-element=panel-content] {
+    padding: 0.5rem 3rem;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button],
+  [data-rlta-element=container]>[data-rlta-element=panel][data-rlta-state=open] {
+    border-bottom: 2px solid #c1c1c1 !important;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-theme=neutral][data-rlta-type=accordions]>[data-rlta-element=button][data-rlta-state=open],
+  [data-rlta-element=container]>[data-rlta-element=panel] {
+    border-bottom: 0 !important;
+  }
+
+  [data-rlta-element=container][data-rlta-type=accordions]>[data-rlta-element=button] {
+    position: relative;
+  }
+
+  [data-rlta-element=container][data-rlta-type=accordions]>[data-rlta-element=button]:before {
+    content: "+";
+    position: absolute;
+    left: 15px;
+    top: 6px;
+    color: #CA1D2D;
+    font-size: 1.5rem;
+  }
+
+  [data-rlta-element=container][data-rlta-type=accordions]>[data-rlta-element=button][data-rlta-state=open]:before {
+    content: "_";
+    position: absolute;
+    left: 16px;
+    top: -11px;
+    color: #CA1D2D;
+    font-size: 1.8rem;
+  }
+
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-type=accordions]>[data-rlta-element=button]>[data-rlta-element=heading],
+  [data-rlta-element=container][data-rlta-state=ready][data-rlta-type=tabs]>[data-rlta-element=button-list]>[data-rlta-element=button]>[data-rlta-element=heading] {
+    font-size: $text-base;
+    font-weight: 700;
+    color: #333;
+  }
+
+  [data-rlta-element=panel-content] {
+    font-size: $text-sm;
+    font-weight: 400;
+    color:#8f8f8f;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .event-faqs {
+    [data-rlta-type="accordions"] {
+      width: 50%;
+      flex: 0 0 auto;
+
+      background-color: unset;
+      border:0;
+      border-radius: 0;
+
+      &:first-child {
+        padding: 0 40px 0 0;
+      }
+      &:nth-child(2){
+        padding: 0 0 0 40px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .event-faqs {
+    [data-rlta-type="accordions"] {
+      width: 50%;
+      flex: 0 0 auto;
+
+      background-color: unset;
+      border:0;
+      border-radius: 0;
+
+      &:first-child {
+        padding: 0 100px 0 0;
+      }
+      &:nth-child(2){
+        padding: 0 0 0 100px;
+      }
+    }
+  }
+}

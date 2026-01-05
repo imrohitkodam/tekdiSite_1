@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <field
+			name="layoutFolder"
+			type="list"
+			label="TPL_TJBASE_LAYOUT_TYPE_LABEL"
+			description="TPL_TJBASE_LAYOUT_TYPE_DESC"
+			>
+        <option value="core">TPL_TJBASE_LAYOUT_TYPE_CORE</option>
+				<option value="custom">TPL_TJBASE_LAYOUT_TYPE_CUSTOM</option>
+		</field>
+		<field
+			name="coreLayoutFile"
+			type="filelist"
+			directory="/templates/tjbase/layouts/core/"
+			stripext="true"
+			label="TPL_TJBASE_SELECT_LAYOUT_CORE_LABEL"
+			description="TPL_TJBASE_SELECT_LAYOUT_CORE_LABEL"
+			hide_none="true"
+			hide_default="true"
+			showon="layoutFolder:core"
+		/>
+		<field
+			name="customLayoutFile"
+			type="filelist"
+			directory="/templates/tjbase/layouts/custom/"
+			stripext="true"
+			label="TPL_TJBASE_SELECT_LAYOUT_CUSTOM_LABEL"
+			description="TPL_TJBASE_SELECT_LAYOUT_CUSTOM_LABEL"
+			hide_none="true"
+			hide_default="true"
+			showon="layoutFolder:custom"
+		/>
+    <field 
+      name="components" 
+      type="textarea" 
+      label="TPL_TJBASE_SELECT_COMPONENT_LABEL"
+      hint="(component1-view1),(component2-view2)"
+      required="true"
+    />
+</form>

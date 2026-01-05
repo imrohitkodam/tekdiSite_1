@@ -1,0 +1,305 @@
+.home .tjbase-bottomline {
+  background-color: #f4faff;
+}
+
+.single-article-section {
+  .sppb-article-info-wrap {
+    h3 {
+      margin-bottom: 30px;
+
+      a {
+        color: #000;
+        font-weight: 700;
+        font-size: 32px;
+        font-style: normal;
+        line-height: 40px;
+        text-decoration: none;
+      }
+    }
+
+    .sppb-article-introtext {
+      color: #666;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .sppb-readmore {
+      color: #ca1d2d;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      text-decoration: none;
+    }
+  }
+
+  .first-section {
+    margin-bottom: 50px;
+
+    .sppb-article-img-wrap {
+      float: right;
+      width: 50%;
+      padding-left: 50px;
+
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+
+  .second-section {
+    .sppb-article-img-wrap {
+      float: left;
+      width: 50%;
+      padding-right: 50px;
+
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+//Our Mission and Highlights
+.our-mission {
+  li {
+    background-color: #f6f6f3;
+    border-radius: 5px;
+  }
+
+  figure {
+    min-height: 150px;
+
+    img {
+      width: unset;
+      max-width: 100%;
+    }
+  }
+
+  .newsflash-title {
+    a {
+      color: #000;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 24px;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .introtext {
+    color: #666;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 20px;
+
+    p {
+      margin-bottom: 10px;
+    }
+  }
+
+  .readmore {
+    a {
+      color: $link-color;
+      font-weight: 700;
+      font-size: 12px;
+      line-height: 20px;
+      text-transform: capitalize;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange-color;
+      }
+    }
+  }
+}
+
+//highlights and Trending News
+
+.highlights {
+  .bg-img {
+    height: 250px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 5px 5px 0 0;
+
+    .newsflash-image {
+      img {
+        width: unset;
+        padding: 15px;
+      }
+    }
+  }
+
+  li {
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.04);
+  }
+
+  .date {
+    color: #8f8f8f;
+    font-weight: 400;
+    font-size: 12px;
+    font-style: normal;
+    line-height: 14px;
+  }
+}
+
+//Our Member Countries
+
+.member-country {
+  .country-flag {
+    background-color: #fff;
+    border-radius: 100%;
+    box-shadow: 0 0 35px rgba(0, 0, 0, 0.04);
+  }
+}
+
+/* Related content module design */
+.vertical-related-content {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e0e0e0;
+
+  h3 {
+    color: #000;
+    font-weight: 500;
+    font-size: $text-lg;
+  }
+
+  .link-item {
+    padding: 0.5rem 0;
+
+    a {
+      display: inline-block;
+      color: #a0a0a0;
+      font-weight: 400;
+      font-size: $text-sm;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+}
+
+/* DRI Coonect Card */
+.dri-connect-card {
+  .card-cover {
+    padding: 2rem;
+    border-radius: 5px;
+
+    &.bg-image {
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    &.course-card {
+      background-image: url('/images/explore-dri-connect/course-bg.png');
+    }
+
+    &.event-card {
+      background-image: url('/images/explore-dri-connect/event-bg.png');
+    }
+
+    &.community-card {
+      background-image: url('/images/explore-dri-connect/community-bg.png');
+    }
+
+    .icon {
+      margin-bottom: 150px;
+    }
+
+    h3 {
+      font-weight: 700;
+      font-size: $text-lg;
+      line-height: 22px;
+
+      a {
+        color: #000;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .desc {
+      height: 35px;
+      margin-bottom: 0.5rem;
+      overflow: hidden;
+      color: #8f8f8f;
+      font-size: $text-xs;
+      line-height: 18px;
+    }
+
+    .explore-link {
+      a {
+        color: $link-color;
+        font-weight: 700;
+        font-size: 0.813rem;
+
+        .fa {
+          font-size: $text-xxs;
+        }
+
+        &:hover {
+          color: $link-hover-color;
+        }
+      }
+    }
+  }
+}
+
+/* User Details starts */
+.user-deatils {
+  text-align: center;
+
+  .user-profile-pic {
+    margin: 0 auto 0.5rem auto;
+    height: 100px;
+    max-width: 100%;
+
+    img {
+      height: 100%;
+      width: auto;
+      max-width: 100%;
+      border-radius: 100%;
+    }
+  }
+
+  .user-name {
+    color: #333;
+    font-weight: 700;
+    font-size: $text-base;
+    line-height: 24px;
+  }
+
+  .user-designation {
+    margin-bottom: 0.5rem;
+    color: #8e8e8e;
+    font-weight: 400;
+    font-size: 0.813rem;
+    line-height: 20px;
+  }
+
+  .user-linkedin {
+    a {
+      text-decoration: none;
+    }
+
+    .fa {
+      color: #0a66c2;
+      font-size: $text-1-5xl;
+    }
+  }
+}
+
+/* User Details ends */

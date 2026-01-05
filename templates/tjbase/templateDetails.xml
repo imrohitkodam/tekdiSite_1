@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension method="upgrade" version="3.1" type="template" >
+	<name>TJBase</name>
+	<version>3.0</version>
+	<creationDate>19th March 2016</creationDate>
+	<author>Techjoomla</author>
+	<authorEmail>extensions@techjoomla.com</authorEmail>
+	<authorUrl>http://www.techjoomla.com</authorUrl>
+	<copyright>Copyright (C) 2019 Techjoomla. All rights reserved.</copyright>
+	<license>license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<description>
+		<![CDATA[ <h2>TJBase v3.1</h2>
+		<p>A ultrafast, lightweight and custom design friendly Joomla template with almost zero bloat.</p>
+		<p>This version is compatible with Joomla 4.x and supports Bootsrap 5 and Font Awesome 6.2.1 free version</p>
+		<div class="invalid"><strong>Warning:-</strong>
+			<ul>
+				<li>This template is intended for expirenced frontend developers with Joomla knowledge.</li>
+				<li>This template is built with utmost love, care and hardwork. If you do not bring issues in our notice and say bad about our template (Pith Piche) that wont solve your problem. So raise it to the right forum. If you feel this needs some improvements, we are happy to hear it on ui@tekditechnologies.com .</li>
+			</ul>
+		</div>
+		 ]]>
+	</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>assets</folder>
+		<folder>html</folder>
+		<folder>includes</folder>
+		<folder>language</folder>
+		<folder>layouts</folder>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="TJBASE_ASSETS">
+				<field
+					name="favicon"
+					type="media"
+					label="TPL_TJBASE_FAVICON_LABEL"
+					description="TPL_TJBASE_FAVICON_DESC"
+					preview="true"
+					>
+				</field>
+				<field
+					name="logoDesktop"
+					type="media"
+					label="TPL_TJBASE_PRIMARY_LOGO_DESKTOP_LABEL"
+					description="TPL_TJBASE_PRIMARY_LOGO_DESKTOP_DESC"
+					preview="true"
+					>
+				</field>
+				<field
+					name="logoMobile"
+					type="media"
+					label="TPL_TJBASE_PRIMARY_LOGO_MOBILE_LABEL"
+					description="TPL_TJBASE_PRIMARY_LOGO_MOBILE_DESC"
+					preview="true"
+					>
+				</field>
+				<field
+					name="themeColor"
+					type="color"
+					label="TPL_TJBASE_THEME_COLOR_LABEL"
+					description="TPL_TJBASE_THEME_COLOR_DESC"
+					default="#45B3D0"
+					>
+				</field>
+				<field
+					name="mainmenu"
+					type="menu"
+					label="TPL_TJBASE_MENU_LABEL"
+					description="TPL_TJBASE_MENU_DESC"
+					default="mainmenu"
+					>
+				</field>
+				<field
+					name="footermenu"
+					type="menu"
+					label="TPL_TJBASE_FOOTER_MENU_LABEL"
+					description="TPL_TJBASE_FOOTER_MENU_DESC"
+					default="footermenu"
+					>
+				</field>
+				<field
+					name="googleAnalytics"
+					type="text"
+					label="TPL_TJBASE_GOOGLE_ANALYTICS_LABEL"
+					description="TPL_TJBASE_GOOGLE_ANALYTICS_DESC"
+					hint="GA-123456"
+					>
+				</field>
+				<field
+					name="googleFonts"
+					type="textarea"
+					label="TPL_TJBASE_GOOGLE_FONT_LABEL"
+					description="TPL_TJBASE_GOOGLE_FONT_DESC"
+					hint="Atma:300,400,500,600,700|Galada&amp;subset=bengali,latin-ext"
+					>
+				</field>
+				<field
+					name="loadMaterialIconCDN"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_MATERIAL_ICON_CDN_LABEL"
+					description="TPL_TJBASE_MATERIAL_ICON_CDN_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="addStylesheetsHead"
+					type="textarea"
+					default=""
+					label="TPL_TJBASE_ADD_STYLESHEETS_LABEL"
+					description="TPL_TJBASE_ADD_STYLESHEETS_DESC"
+					rows="10"
+					>
+				</field>
+				<field
+					name="addScriptsHead"
+					type="textarea"
+					default=""
+					label="TPL_TJBASE_ADD_SCRIPTS_LABEL"
+					description="TPL_TJBASE_ADD_SCRIPTS_DESC"
+					rows="10"
+					>
+				</field>
+				<field
+					name="addCSSBodyEnding"
+					type="textarea"
+					label="TPL_TJBASE_ADD_CSS_BODY_ENDING_LABEL"
+					description="TPL_TJBASE_ADD_CSS_BODY_ENDING_DESC"
+					hint="templates/tjbase/css/style1.css,templates/tjbase/css/style2.css"
+					rows="10"
+					>
+				</field>
+				<field
+					name="addJSBodyEnding"
+					type="textarea"
+					label="TPL_TJBASE_ADD_JS_BODY_ENDING_LABEL"
+					description="TPL_TJBASE_ADD_JS_BODY_ENDING_DESC"
+					hint="templates/tjbase/assets/js/script1.js,templates/assets/tjbase/js/script2.js"
+					rows="10"
+					>
+				</field>
+				<field
+					name="addAtHeadBeginning"
+					type="textarea"
+					label="TPL_TJBASE_ADD_HEAD_BEGINNING_LABEL"
+					description="TPL_TJBASE_ADD_HEAD_BEGINNING_DESC"
+					rows="10"
+					filter="raw"
+					>
+				</field>
+				<field
+					name="addAtHeadEnding"
+					type="textarea"
+					label="TPL_TJBASE_ADD_HEAD_ENDING_LABEL"
+					description="TPL_TJBASE_ADD_HEAD_ENDING_DESC"
+					rows="10"
+					filter="raw"
+					>
+				</field>
+				<field
+					name="addAtBodyBeginning"
+					type="textarea"
+					label="TPL_TJBASE_ADD_BODY_BEGINNING_LABEL"
+					description="TPL_TJBASE_ADD_BODY_BEGINNING_DESC"
+					rows="10"
+					filter="raw"
+					>
+				</field>
+				<field
+					name="addAtBodyEnding"
+					type="textarea"
+					label="TPL_TJBASE_ADD_BODY_ENDING_LABEL"
+					description="TPL_TJBASE_ADD_BODY_ENDING_DESC"
+					rows="10"
+					filter="raw"
+					>
+				</field>
+				<field
+					name="removeStylesheets"
+					type="textarea"
+					default=""
+					label="TPL_TJBASE_REMOVE_STYLESHEETS_LABEL"
+					description="TPL_TJBASE_REMOVE_STYLESHEETS_DESC"
+					rows="10"
+					>
+				</field>
+				<field
+					name="removeScripts"
+					type="textarea"
+					hint="/media/jui/js/bootstrap.min.js,/media/jui/js/jquery.min.js,/media/jui/js/jquery-migrate.min.js,/media/jui/js/jquery-noconflict.js,/media/system/js/mootools-more.js,/media/system/js/mootools-core.js,/media/system/js/core.js,/media/system/js/modal.js,/media/system/js/caption.js,/media/system/js/caption.js"
+					label="TPL_TJBASE_REMOVE_SCRIPTS_LABEL"
+					description="TPL_TJBASE_REMOVE_SCRIPTS_DESC"
+					rows="10"
+					>
+				</field>
+				<field
+					name="zohoTrackingCode"
+					type="text"
+					label="TPL_TJBASE_ZOHO_WIDGET_ID_LABEL"
+					description="TPL_TJBASE_ZOHO_WIDGET_ID_DESC"
+					hint="1fa9c3a"
+					>
+				</field>
+			</fieldset>
+			<fieldset name="TJBASE_LAYOUTS">
+				<field
+					name="layoutsDefault"
+					type="subform"
+					formsource="templates/tjbase/includes/layoutsDefault.xml"
+					multiple="false"
+					label="TPL_TJBASE_DEFAULT_LAYOUT_LABEL"
+					description="TPL_TJBASE_DEFAULT_LAYOUT_DESC"
+					min="1"
+					layout="joomla.form.field.subform.default"
+					/>
+				<field
+					type="spacer"
+					name="myspacer1"
+					hr="true"
+					/>
+				<field
+					name="layoutsComponents"
+					type="subform"
+    				formsource="templates/tjbase/includes/layoutsComponents.xml"
+					multiple="true"
+    				label="TPL_TJBASE_LAYOUTS_SELECT_COMPONENT_LABEL"
+					description="TPL_TJBASE_LAYOUTS_SELECT_COMPONENT_DESC"
+					min="0"
+					layout="joomla.form.field.subform.repeatable"
+					/>
+				<field
+					type="spacer"
+					name="myspacer2"
+					hr="true"
+					/>
+				<field
+					name="layoutsMenu"
+					type="subform"
+					formsource="templates/tjbase/includes/layoutsMenus.xml"
+					multiple="true"
+					label="TPL_TJBASE_LAYOUTS_SELECT_MENU_LABEL"
+					description="TPL_TJBASE_LAYOUTS_SELECT_MENU_DESC"
+					min="0"
+					layout="joomla.form.field.subform.repeatable"
+					/>
+				<field
+					type="spacer"
+					name="myspacer3"
+					hr="true"
+					/>
+
+				<field
+					name="stickyheader"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_STICKY_HEADER_LABEL"
+					description="TPL_TJBASE_ENABLE_STICKY_HEADER_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="scrolltotop"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_SCROLL_TO_TOP_LABEL"
+					description="TPL_TJBASE_ENABLE_SCROLL_TO_TOP_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="pageLoadingProgress"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_PAGE_LOADING_PROGRESS_LABEL"
+					description="TPL_TJBASE_ENABLE_PAGE_LOADING_PROGRESS_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="TJBASE_SOCIAL">
+				<field
+					name="ogTag"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_OG_TAG_LABEL"
+					description="TPL_TJBASE_ENABLE_OG_TAG_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="ogType"
+					type="list"
+					default="3"
+					label="TPL_TJBASE_ENABLE_OG_TAG_TYPE_LABEL"
+					description="TPL_TJBASE_ENABLE_OG_TAG_TYPE_DESC"
+					>
+					<option value="website">Website</option>
+					<option value="article">Article</option>
+				</field>
+				<field
+					name="shareDefaultImg"
+					type="media"
+					label="TPL_TJBASE_ENABLE_OG_TAG_IMG_LABEL"
+					description="TPL_TJBASE_ENABLE_OG_TAG_IMG_DESC"
+					>
+				</field>
+				<field
+					name="fbAdminId"
+					type="text"
+					default=""
+					label="TPL_TJBASE_ENABLE_FB_ADMIN_ID_LABEL"
+					description="TPL_TJBASE_ENABLE_FB_ADMIN_ID_DESC"
+					>
+				</field>
+				<field
+					name="twitterCard"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_TWITTER_CARD_LABEL"
+					description="TPL_TJBASE_ENABLE_TWITTER_CARD_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="twitterCardType"
+					type="list"
+					default=""
+					label="TPL_TJBASE_ENABLE_TWITTER_CARD_TYPE_LABEL"
+					description="TPL_TJBASE_ENABLE_TWITTER_CARD_TYPE_DESC"
+					>
+					<option value="summary">Summary</option>
+					<option value="summary_large_image">Summary with Large Image</option>
+				</field>
+				<field
+					name="twitterHandle"
+					type="text"
+					default=""
+					label="TPL_TJBASE_ENABLE_TWITTER_HANDLE_LABEL"
+					description="TPL_TJBASE_ENABLE_TWITTER_HANDLE__DESC"
+					>
+				</field>
+				<field
+					name="schema"
+					type="radio"
+					class="btn-group"
+					default="1"
+					label="TPL_TJBASE_ENABLE_SCHEMA_LABEL"
+					description="TPL_TJBASE_ENABLE_SCHEMA_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+			</fieldset>
+			<fieldset name="TJBASE_ERROR_MESSAGES">
+				<field
+					name="message_404"
+					type="editor"
+					label="TPL_TJBASE_404_MESSAGE_LABEL"
+					description="TPL_TJBASE_404_MESSAGE_LABEL_DESC"
+					filter="raw"
+					>
+				</field>
+				<field
+					name="message_500"
+					type="editor"
+					label="TPL_TJBASE_500_MESSAGE_LABEL"
+					description="TPL_TJBASE_500_MESSAGE_LABEL_DESC"
+					filter="raw"
+					>
+				</field>
+			</fieldset>
+			<fieldset name="TJBASE_ADVANCED">
+				<field
+					name="csp"
+					type="textarea"
+					default=""
+					label="TPL_TJBASE_CSP_LABEL"
+					description="TPL_TJBASE_CSP_DESC"
+					hint="default-src 'self'; base-uri 'self'; block-all-mixed-content; connect-src 'self'; font-src 'self' data:; form-action 'self'; object-src 'self'; media-src 'self'; frame-ancestors 'self'; frame-src www.youtube.com staticxx.facebook.com platform.twitter.com; img-src 'self' syndication.twitter.com platform.twitter.com *.twimg.com; script-src 'self' cdn.syndication.twimg.com platform.twitter.com connect.facebook.net;  style-src 'self' connect.facebook.net ton.twimg.com 'unsafe-inline';"
+					filter="raw"
+					rows="10"
+					>
+				</field>
+				<field
+					name="manifest"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_MANIFEST_LABEL"
+					description="TPL_TJBASE_MANIFEST_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="enableServiceWorker"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_SERVICE_WORKER_LABEL"
+					description="TPL_TJBASE_SERVICE_WORKER_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="enableBrowserNotSupported"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_BROWSER_NOT_SUPPORTED_LABEL"
+					description="TPL_TJBASE_ENABLE_BROWSER_NOT_SUPPORTED_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+				<field
+					name="supportedBrowserConfig"
+					type="textarea"
+					label="TPL_TJBASE_BROWSER_NOT_SUPPORTED_CONFIG_LABEL"
+					description="TPL_TJBASE_BROWSER_NOT_SUPPORTED_CONFIG_DESC"
+					>
+				</field>
+				<field
+					name="message_browserNotSupported"
+					type="textarea"
+					label="TPL_TJBASE_BROWSER_NOT_SUPPORTED_MESSAGE_LABEL"
+					description="TPL_TJBASE_BROWSER_NOT_SUPPORTED_MESSAGE_DESC"
+					>
+				</field>
+				<field
+					name="enableaccessibilityChecker"
+					type="radio"
+					class="btn-group"
+					default="0"
+					label="TPL_TJBASE_ENABLE_ACCESSIBILITY_CHEKER_LABEL"
+					description="TPL_TJBASE_ENABLE_ACCESSIBILITY_CHEKER_DESC"
+					>
+					<option value="0">TPL_TJBASE_NO</option>
+					<option value="1">TPL_TJBASE_YES</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

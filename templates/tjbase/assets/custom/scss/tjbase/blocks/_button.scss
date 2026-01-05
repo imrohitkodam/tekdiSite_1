@@ -1,0 +1,86 @@
+/* ======================================
+ * Common Buttons
+ * ===================================== */
+button {
+  &:hover,
+  &:focus {
+    outline: 0 !important;
+  }
+}
+
+.btn {
+  padding: 8px 35px;
+  border-radius: 3px;
+}
+
+.btn-small {
+  padding: 4px 16px;
+  font-size: $text-sm;
+}
+
+.btn-primary {
+  background-color: #CA1D2D;
+  border: 2px solid #ca1d2d;
+  font-weight: 700;
+  font-size: 1rem;
+
+  &:hover,
+  &:focus {
+    background-color: #f13044;
+    border: 2px solid #f13044;
+    box-shadow: unset;
+  }
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border: 2px solid #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+
+  &:hover,
+  &:focus {
+    background-color: transparent;
+    border: 2px solid #CA1D2D;
+    color: #fff;
+    box-shadow: unset;
+  }
+}
+
+.btn-default {
+  background-color: #fff;
+  border: 2px solid #CA1D2D;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #CA1D2D;
+
+  &:hover,
+  &:focus {
+    background-color: #CA1D2D;
+    border: 2px solid #CA1D2D;
+    color: #fff;
+    box-shadow: unset;
+  }
+}
+
+.btn-lightgrey {
+  background-color: #e3e3e3;
+}
+
+.tjbase-banner {
+  .btn {
+    padding: 6px 16px;
+    border: 1px solid #fff;
+    color: #fff;
+    transition: all .2s ease-out 0s;
+    transform: scale3d(1, 1, 1);
+    font-size: $text-base;
+    font-weight: 500;
+
+    &:hover {
+      transform: scale3d(1.05, 1.05, 1.05) translateY(-2px);
+      transition: 0.5s;
+    }
+  }
+}
