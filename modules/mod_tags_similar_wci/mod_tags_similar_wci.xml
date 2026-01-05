@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.1" client="site" method="upgrade">
+  <name>mod_tags_similar_wci</name>
+  <author>Szekely Denes AKA webGobe</author>
+  <creationDate>September 2019</creationDate>
+  <copyright>Copyright (C) 2005 - 2019 Székely Dénes AKA webGóbé. All rights reserved.</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <authorEmail>joomla@webgobe.com</authorEmail>
+  <authorUrl>https://www.webgobe.com</authorUrl>
+  <version>2.23</version>
+  <description>MOD_TAGS_SIMILAR_WCI_XML_DESCRIPTION</description>
+  <files>
+    <filename module="mod_tags_similar_wci">mod_tags_similar_wci.php</filename>
+    <folder>tmpl</folder>
+    <filename>helper.php</filename>
+    <filename>index.html</filename>
+    <filename>mod_tags_similar_wci.xml</filename>
+  </files>
+  <languages>
+    <language tag="en-GB">language/en-GB.mod_tags_similar_wci.ini</language>
+    <language tag="en-GB">language/en-GB.mod_tags_similar_wci.sys.ini</language>
+  </languages>
+  <config>
+    <fields name="params">
+      <fieldset name="basic">
+        <field
+					name="maximum"
+					type="integer"
+					default="5"
+					first="1"
+					last="20"
+					step="1"
+					label="MOD_TAGS_SIMILAR_WCI_MAX_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_MAX_DESC"></field>
+        <field
+					name="width"
+					type="text"
+					default="75"
+					label="MOD_TAGS_SIMILAR_WCI_WIDTH_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_WIDTH_DESC"></field>
+        <field
+					name="align"
+					type="list"
+					default="left"
+					label="MOD_TAGS_SIMILAR_WCI_ALIGN_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_ALIGN_DESC">
+          <option value="left">MOD_TAGS_SIMILAR_WCI_ALIGN_LEFT</option>
+          <option value="right">MOD_TAGS_SIMILAR_WCI_ALIGN_RIGHT</option>
+        </field>
+        <field
+					name="matchtype"
+					type="list"
+					default="any"
+					label="MOD_TAGS_SIMILAR_WCI_FIELD_MATCHTYPE_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_FIELD_MATCHTYPE_DESC">
+          <option value="all">MOD_TAGS_SIMILAR_WCI_FIELD_ALL</option>
+          <option value="any">MOD_TAGS_SIMILAR_WCI_FIELD_ONE</option>
+          <option value="half">MOD_TAGS_SIMILAR_WCI_FIELD_HALF</option>
+        </field>
+        <field
+					name="what"
+					type="list"
+					default="all"
+					label="MOD_TAGS_SIMILAR_WCI_FIELD_WHAT_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_FIELD_WHAT_DESC">
+          <option value="all">MOD_TAGS_SIMILAR_WCI_FIELD_ALLIMAGES</option>
+          <option value="intro">MOD_TAGS_SIMILAR_WCI_FIELD_INTRO</option>
+          <option value="full">MOD_TAGS_SIMILAR_WCI_FIELD_FULL</option>
+          <option value="content">MOD_TAGS_SIMILAR_WCI_FIELD_CONTENT</option>
+        </field>
+		        <field
+					name="sort"
+					type="list"
+					default="down"
+					label="MOD_TAGS_SIMILAR_WCI_FIELD_SORT_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_FIELD_SORT_DESC">
+          <option value="up">MOD_TAGS_SIMILAR_WCI_FIELD_SORT_UP</option>
+          <option value="down">MOD_TAGS_SIMILAR_WCI_FIELD_SORT_DOWN</option>
+          <option value="random">MOD_TAGS_SIMILAR_WCI_FIELD_SORT_RANDOM</option>
+          <option value="unsorted">MOD_TAGS_SIMILAR_WCI_FIELD_SORT_NOT</option>
+        </field>
+        <field
+					name="showintro"
+					type="list"
+					default="1"
+					label="MOD_TAGS_SIMILAR_WCI_FIELD_SHOW_INTROTEXT_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_FIELD_SHOW_INTROTEXT_DESC">
+          <option value="1">MOD_TAGS_SIMILAR_WCI_FIELD_YES</option>
+          <option value="0">MOD_TAGS_SIMILAR_WCI_FIELD_NO</option>
+        </field>
+        <field
+					name="autohide"
+					type="list"
+					default="yes"
+					label="MOD_TAGS_SIMILAR_WCI_FIELD_AUTOHIDE_LABEL"
+					description="MOD_TAGS_SIMILAR_WCI_FIELD_AUTOHIDE_DESC">
+          <option value="1">MOD_TAGS_SIMILAR_WCI_FIELD_YES</option>
+          <option value="0">MOD_TAGS_SIMILAR_WCI_FIELD_NO</option>
+        </field>
+      </fieldset>
+      <fieldset
+				name="advanced">
+        <field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+        <field
+					name="moduleclass_sfx"
+					type="textarea" rows="3"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+        <field
+					name="owncache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">JGLOBAL_USE_GLOBAL</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+      </fieldset>
+    </fields>
+  </config>
+  <updateservers>
+    <server type="extension" priority="1" name="Similar tags with image module">https://www.webgobe.com/updates/tags-similar-wci-module.xml</server>
+  </updateservers>
+</extension>

@@ -1,0 +1,34 @@
+/**
+ * @version     $Id$
+ * @author      JoomlaUX
+ * @package     Joomla.Site
+ *
+ * @copyright   Copyright (C) 2013 JoomlaUX. All rights reserved.
+ * @license     License GNU General Public License version 2 or later; see LICENSE.txt, see LICENSE.php
+ */
+.ntm-item {
+    cursor: move;
+    position: relative;
+}
+
+#juxtimeline_remove {
+    float: right;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: #F0F0F0;
+    border: 1px solid #F0F0F0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+.well-small {
+    padding: 9px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}

@@ -1,0 +1,138 @@
+.mos-img img {display: none !important;}
+.timeline {
+ border-left:3px solid #c00;
+ border-bottom-right-radius:2px;
+ border-top-right-radius:2px;
+ position:relative;
+ padding:0 30px;
+ margin-left:280px
+}
+.timeline .item {
+ position:relative;
+ margin-bottom:45px
+}
+.timeline .item:last-child {
+ margin-bottom:0
+}
+.timeline .item:before {
+ content:"";
+ position:absolute;
+ left:-43px;
+ top:0;
+ display:inline-block;
+ width:17px;
+ height:17px;
+ -webkit-border-radius:50%;
+ -moz-border-radius:50%;
+ -ms-border-radius:50%;
+ -o-border-radius:50%;
+ border-radius:50%;
+ -moz-background-clip:padding;
+ -webkit-background-clip:padding-box;
+ background-clip:padding-box;
+ background:#fff;
+ border:3px solid #c00
+}
+.timeline .item:after {
+ content:"";
+ position:absolute;
+ left:-37px;
+ top:6px;
+ display:inline-block;
+ width:10px;
+ height:10px;
+ -webkit-border-radius:50%;
+ -moz-border-radius:50%;
+ -ms-border-radius:50%;
+ -o-border-radius:50%;
+ border-radius:50%;
+ -moz-background-clip:padding;
+ -webkit-background-clip:padding-box;
+ background-clip:padding-box;
+ background-color:#c00;
+ z-index:10
+}
+.timeline .work-place {
+ position:relative
+}
+.timeline .location {
+ position:absolute;
+ right:0;
+ top:5px;
+ color:#8a8a8a
+}
+
+.timeline .place {
+ margin-top:0;
+ margin-bottom:5px;
+ font-size:24px;
+ font-weight:300;
+ margin-left: 50px;
+}
+.timeline .job-meta {
+ position:absolute;
+ left:-280px;
+ top:0
+}
+.timeline .job-meta .title {
+ font-size:18px; 
+ color:#c00;
+ max-width:220px
+}
+.timeline .job-meta .time {
+ color:#8a8a8a
+}
+.timeline .job-desc {
+ color:#666
+}
+.timeline .item-social-icons {
+  left: 0px !important;
+  top: -7px !important;
+  background: #c00 !important;
+}
+
+.timeline .btn-box{
+	position: relative;
+	padding: 6px 0;
+}
+
+.timeline .btn-box a{
+	padding: 8px 20px;
+	font-size: 14px;
+	background-color: #c00;
+	color: #ffffff;
+	border-top:2px solid transparent;
+	border-bottom:2px solid transparent;
+	border-radius: 5px;
+}
+.timeline .note-image{
+	float: left;
+	margin-right: 15px;
+	margin-bottom: 15px;
+	max-width: 250px;
+	height: auto;
+
+}
+@media (max-width: 767px) {
+
+ .timeline {
+  margin-left:0;
+  padding-right:0
+ }
+
+.timeline .item {
+ margin-bottom:45px !important
+}
+ .timeline .location {
+ position:relative; }
+ .timeline .place {
+  margin-bottom:5px
+ }
+ .timeline .job-meta {
+  position:static;
+  margin-bottom:15px
+ }
+ .timeline .job-meta .title {
+  max-width:none
+ }
+ }

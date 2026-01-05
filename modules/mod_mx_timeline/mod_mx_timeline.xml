@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" version="1.7.0" method="upgrade">
+	<name>Timeline</name>
+	<author>mixwebtemplates</author>
+	<creationDate>Jan 27, 2020</creationDate>
+	<copyright>Copyright (C) http://www.mixwebtemplates.com. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>support@mixwebtemplates.com</authorEmail>
+	<authorUrl>www.mixwebtemplates.com</authorUrl>
+	<version>4.0.26</version>	
+		<description>	
+	<![CDATA[<link href="../modules/mod_mx_timeline/assets/css/admin.css" rel="stylesheet" type="text/css" media="all" />
+	<h1>Timeline free version</h1>
+	<div style="margin:0 0 0 10px; font-size:15px;">Timeline free version from <a href="http://www.mixwebtemplates.com" target="_blank">mixwebtemplates.com</a>. In Free version is available only style 6. If you interested in other styles please visit <a href="https://www.mixwebtemplates.com/joomla-extensions/item/261-timeline-joomla-module" target="_blank">timeline module page</a></div>
+	<h3>Userful links</h3>
+	<ul><li><a target='_blank' href='https://www.mixwebtemplates.com/joomla-templates'>Joomla templates</a></li>
+	<li><a target='_blank' href='https://www.mixwebtemplates.com/contact'>Report bug</a></li></ul></p>
+					
+		<div class="footer_review">
+				Like this extensions? <a href="https://extensions.joomla.org/extension/news-display/articles-display/mx-timeline/" target="_blank">Leave a review on JED</a>
+				<a class="stars" href="https://extensions.joomla.org/extension/news-display/articles-display/mx-timeline/" target="_blank">
+					<span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span><span class="icon-star"></span>
+				</a>
+			</div>	
+		]]></description>
+	<files>
+		<filename module="mod_mx_timeline">mod_mx_timeline.php</filename>
+		<filename>index.html</filename>
+		<folder>assets</folder>
+		<folder>core</folder>
+		<folder>tmpl</folder>
+	</files>
+	<updateservers>
+  		<server type="extension" priority="1" name="Mx timeline"><![CDATA[https://www.mixwebtemplates.com/updates/mod_mx_timeline_free.xml]]></server>
+  	</updateservers>
+	<config>
+		<fields name="params">
+			<fieldset name="settings" label="Settings" addfieldpath="/modules/mod_mx_timeline/assets/elements/">	
+				<field  type="separator" text="Layout"  />				
+				<field name="get_style" type="list" default="style6" label="Layout" description="Select a Layout" >
+					<option value="default" disabled="true">Default (pro)</option>
+					<option value="style1" disabled="true">Style 1 (pro)</option>
+					<option value="style2" disabled="true">Style 2 (pro)</option>
+					<option value="style3" disabled="true">Style 3 (pro)</option>
+					<option value="style4" disabled="true">Style 4 (pro)</option>
+					<option value="style5" disabled="true">Style 5 (pro)</option>
+					<option value="style6">Style 6</option>
+					<option value="style7" disabled="true">Style 7 (pro)</option>
+					<option value="style8" disabled="true">Style 8 (pro)</option>
+					<option value="style9" disabled="true">Horizontal (pro)</option>
+					<option value="style10" disabled="true">Style 10 (pro)</option>
+					<option value="style11" disabled="true">Style 11 (pro)</option>
+					<option value="style12" disabled="true">Style 12 (pro)</option>
+					<option value="style13" disabled="true">Style 13 (pro)</option>
+					<option value="style14" disabled="true">Style 14 (pro)</option>
+					<option value="style15" disabled="true">Style 15 (pro)</option>
+				</field>
+													
+				<field name="dataRev" type="radio" class="btn-group" default="0" label="Reveal effect (pro)" description="Use reveal on scroll down effect" disabled="true">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+							
+				<field name="btx_color" type="color" format="rgba" default="" label="Text Color" description="Text Color"  showon="get_style:default" />
+				<field name="bgm_color" type="color" format="rgba" default="" label="Custom Color" description="Custom color" showon="get_style:default,style6,style2" />		
+						
+				<field name="get_fonto" type="list" default="0" label="Font awesome" description="Use font awesome only in case of icon issues" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+			
+				<field  type="separator" text="Article settings" />
+				<field name="catid" type="category" extension="com_content" multiple="true" size="10" default="" label="Select Category" description="Select category" />
+				<field name="show_child_category_articles" type="radio" class="btn-group" default="0" label="Child Category Articles" description="Include or Exclude Articles from Child Categories.">
+                    <option value="1">Include</option>
+                    <option value="0">Exclude
+                    </option>
+                </field>  
+                <field name="tag" type="tag" label="JTAG" mode="nested" multiple="true" filter="intarray" class="multipleTags" showon="get_source:0" />
+				<field name="levels" type="text" default="1" label="Category Depth" description="The number of child category levels to return." />                              
+                <field name="show_front" type="radio" default="show" class="btn-group" label="Featured Articles" description="Select to Show, Hide, or Only display Featured Articles.">
+                    <option value="show">Show</option>
+                    <option value="hide">Hide</option>
+                    <option value="only">Only</option>
+                </field>
+                <field name="article_ordering" type="list" default="a.title" label="Article Field to Order By" description="Select which field you would like Articles to be ordered by. Featured Ordering should only be used when Filtering Option for Featured Articles is set to 'Only'.">
+                    <option value="a.ordering">Article Manager Order</option>
+                    <option value="fp.ordering">Featured Articles Order</option>
+                    <option value="a.hits">Hits</option>
+                    <option value="a.title">Title</option>
+                    <option value="a.id">ID</option>
+                    <option value="a.alias">Alias</option>
+                    <option value="a.created">Created Date</option>
+                    <option value="modified">Modified Date</option>
+                    <option value="publish_up">Start Publishing Date</option>
+                    <option value="a.publish_down">Finish Publishing Date</option>
+					<option value="rand()">Random</option>
+                </field>
+                <field name="article_ordering_direction" type="list" default="ASC" label="Ordering Direction" description="Select the direction you would like Articles to be ordered by.">
+                    <option value="DESC">Descending</option>
+                    <option value="ASC">Ascending</option>
+                </field>
+                <field name="count" type="text" default="10" label="Count" description="The number of articles to display. The default value of 0 will display all articles." />
+				<field name="link_target" type="list" default="_self" label="Open Link"	description="The Type shows when you click on the link">
+					<option value="_blank">New Window</option>
+					<option value="_self">Same Window</option>
+					<option value="_windowopen">Popup window</option>
+				</field>				
+				<field name="triggerevents" type="radio" label="Articles Custom Fields" description="Trigger Articles Custom Fields" class="btn-group" default="0" filter="integer" >
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field> 
+				<field name="cat_title_display" type="radio" default="1" class="btn-group" label="Category Title" description="Display title of category">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="title_display" type="radio" default="1" class="btn-group" label="Item Title" description="Display title of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="item_title_max_characs" type="text" default="25" label="Title Maxlength" description="Max length of title by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="links_title_display" type="radio" default="1" class="btn-group" label="Item Title as link" description="Display the links on title of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+				<field name="item_desc_display" type="radio" default="1" class="btn-group" label="Description display" description="Display description of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="item_desc_max_characs" type="text" default="200" label="Description Maxlength" description="Max length of description by characters. Enter value 0 if you want to show all. Please enter integer number >= 0." />
+				<field name="author_display" type="radio" default="1" class="btn-group" label="Author display" description="Display Author of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="item_date_display" type="radio" default="1" class="btn-group" label="Date display" description="Date display of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>				
+				<field name="show_date_format" type="combo" default="Y-m-d" label="Date Format" description="Select Date Format">
+                    <option value="l, d F Y">l, d F Y</option>
+                    <option value="l, d F Y H:i">l, d F Y H:i</option>
+                    <option value="d F Y">d F Y</option>
+                    <option value="Y-m-d">Y-m-d</option>
+                    <option value="Y-m-d H:i">Y-m-d H:i</option>
+                    <option value="Y-m-d H:i:s">Y-m-d H:i:s</option>
+                    <option value="y-m-d">y-m-d</option>
+                    <option value="Y">Y</option>
+                    <option value="d M Y">d M Y</option>
+                </field>
+				<field name="item_readmore_display" class="btn-group" type="radio" default="1" label="Show Read More" description="Show Read More">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="item_readmore_text"  type="text" default="Read more" label="Read More Text" description="Please enter the read more text in here" />
+				<field type="separator" text="Images settings" />
+				<field name="item_img_display" type="radio" default="1" class="btn-group" label="Item Image" description="Display image of item">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="imgol_from_image_intro" label="From Image Intro" class="btn-group" description="Get Images From Image Intro" type="radio" default="1">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </field>
+			     <field name="imgol_from_image_fulltext" label="From Image Fulltext" class="btn-group" description="Get Images From Image Fulltext" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field> 
+                <field name="imgol_from_inline_introtext" label="From Inline Introtext" class="btn-group" description="Get Images From Inline Introtext" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+                <field name="imgol_from_inline_fulltext" label="From Inline Fulltext" class="btn-group" description="Get images From Inline Fulltext" type="radio" default="1">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+                <field name="imgol_order" type="text" default="image_intro, image_fulltext, inline_introtext, inline_fulltext" label="Order to Get" description="Order to Get Image" />
+                <field name="imgol_function" type="list" label="Resize Mode (pro)" default="none" description="Resize Mode"  disabled="true">
+                     <option value="none">None</option>
+                     <option value="resize_center">Center</option>
+                     <option value="resize_fill">Fill</option>
+                     <option value="resize_fit">Fit</option>
+                     <option value="resize_stretch">Stretch</option>
+                </field>
+                <field name="imgol_type" type="list" default="" label="Output Format (pro)" description="Output Format after Resizing" disabled="true">
+                     <option value="">Default</option>
+                     <option value="1">GIF</option>
+                     <option value="2">JPEG</option>
+                     <option value="3">PNG</option>
+                </field>
+                <field name="imgol_transparency" label="Keep Transparency (pro)" class="btn-group" description="Keep Transparency. Applied for GIF/PNG format" type="radio" default="1" disabled="true">
+                     <option value="1">Yes</option>
+                     <option value="0">No</option>
+                </field>
+                <field name="imgol_width" type="text" default="1300" label="Image Width (pro)" description="Image Width" disabled="true" />
+                <field name="imgol_height" type="text" default="650" label="Image Height (pro)" description="Image Height" disabled="true" />
+                <field name="imgol_placeholder_path" type="text" default="modules/mod_mx_timeline/assets/images/noimage.jpg" label="Placeholder Path (or Url)" description="The Path (or URL) of Default Image"/>     
+                <field name="authorinfobox"  type="otherext" /> 
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field name="layout" type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+								<field name="owncache" type="list" default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC" >
+					<option value="1">JGLOBAL_USE_GLOBAL</option>
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING
+					</option>
+				</field>
+				<field name="cache_time" type="text" default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL" description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

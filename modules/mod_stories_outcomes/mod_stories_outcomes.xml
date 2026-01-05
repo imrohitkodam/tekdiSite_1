@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>mod_stories_outcomes</name>
+    <author>Your Company</author>
+    <creationDate>December 2025</creationDate>
+    <copyright>Copyright (C) 2025 Your Company. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later</license>
+    <authorEmail>your-email@example.com</authorEmail>
+    <authorUrl>https://www.example.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Displays Stories Outcomes data from custom fields (subform type) on the frontend. Configure the module to show outcomes from the current article or a specific article.</description>
+    
+    <files>
+        <filename module="mod_stories_outcomes">mod_stories_outcomes.php</filename>
+        <filename>helper.php</filename>
+        <folder>tmpl</folder>
+        <folder>language</folder>
+    </files>
+    
+    <administration>
+        <languages folder="language">
+            <language tag="en-GB">en-GB/mod_stories_outcomes.sys.ini</language>
+        </languages>
+    </administration>
+    
+    <languages folder="language">
+        <language tag="en-GB">en-GB/mod_stories_outcomes.ini</language>
+    </languages>
+    
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="source_mode"
+                    type="list"
+                    label="Data Source"
+                    description="Select whether to display outcomes from the current article or a specific article."
+                    default="current"
+                >
+                    <option value="current">Current Article</option>
+                    <option value="specific">Specific Article</option>
+                </field>
+                
+                <field
+                    name="article_id"
+                    type="text"
+                    label="Article ID"
+                    description="Enter the ID of the article to display outcomes from (only used when Data Source is set to 'Specific Article')."
+                    default=""
+                    filter="integer"
+                    showon="source_mode:specific"
+                />
+                
+                <field
+                    name="subform_field_name"
+                    type="text"
+                    label="Subform Field Name"
+                    description="The name of the custom field that contains the Stories Outcomes subform data (default: stories-outcomes-field)."
+                    default="stories-outcomes-field"
+                    required="true"
+                />
+                
+                <field
+                    name="title_field_key"
+                    type="text"
+                    label="Title Field Key"
+                    description="The key name for the title field within the subform rows (default: stories-outcomes-title)."
+                    default="stories-outcomes-title"
+                    required="true"
+                />
+                
+                <field
+                    name="description_field_key"
+                    type="text"
+                    label="Description Field Key"
+                    description="The key name for the description field within the subform rows (default: stories-outcomes-description)."
+                    default="stories-outcomes-description"
+                    required="true"
+                />
+                
+                <field
+                    name="heading_tag"
+                    type="list"
+                    label="Heading Tag"
+                    description="Select the HTML heading tag to use for outcome titles (default: H3)."
+                    default="h3"
+                >
+                    <option value="h2">H2</option>
+                    <option value="h3">H3</option>
+                    <option value="h4">H4</option>
+                    <option value="h5">H5</option>
+                    <option value="h6">H6</option>
+                </field>
+                
+                <field
+                    name="show_empty"
+                    type="radio"
+                    label="Show When Empty"
+                    description="Display the module even when there are no outcomes to show."
+                    default="0"
+                    layout="joomla.form.field.radio.switcher"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                
+                <field
+                    name="limit"
+                    type="text"
+                    label="Limit"
+                    description="Maximum number of outcomes to display. Set to 0 for unlimited."
+                    default="0"
+                    filter="integer"
+                />
+                
+                <field
+                    name="debug_mode"
+                    type="radio"
+                    label="Debug Mode"
+                    description="Enable debug mode to see what data is being loaded (for testing only)."
+                    default="0"
+                    layout="joomla.form.field.radio.switcher"
+                >
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+            </fieldset>
+            
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+                
+                <field
+                    name="moduleclass_sfx"
+                    type="textarea"
+                    label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                    description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC"
+                    rows="3"
+                />
+                
+                <field
+                    name="cache"
+                    type="list"
+                    label="COM_MODULES_FIELD_CACHING_LABEL"
+                    description="COM_MODULES_FIELD_CACHING_DESC"
+                    default="1"
+                >
+                    <option value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                
+                <field
+                    name="cache_time"
+                    type="text"
+                    label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                    description="COM_MODULES_FIELD_CACHE_TIME_DESC"
+                    default="900"
+                />
+                
+                <field
+                    name="cachemode"
+                    type="hidden"
+                    default="static"
+                >
+                    <option value="static"></option>
+                </field>
+            </fieldset>
+        </fields>
+    </config>
+</extension>
